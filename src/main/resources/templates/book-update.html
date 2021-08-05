@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Update book</title>
+</head>
+<body>
+<form action="#" th:action="@{/book-update}" th:object="${book}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="bookTitle">Book title</label>
+    <input type="text" th:field="*{bookTitle}" id="bookTitle" placeholder="Book title">
+    <br/>
+    <label for="authorName">Author name</label>
+    <input type="text" th:field="*{authorName}" id="authorName" placeholder="Author name">
+    <br/>
+    <input type="submit" value="Update book">
+    <p><a href="/books">Cancel</a></p>
+</form>
+</body>
+</html>
